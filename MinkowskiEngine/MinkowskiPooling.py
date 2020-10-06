@@ -178,8 +178,9 @@ class MinkowskiPoolingBase(MinkowskiModuleBase):
         )
 
     def __repr__(self):
-        s = "(kernel_size={}, stride={}, dilation={})".format(
-            self.kernel_size, self.stride, self.dilation
+        s = "(kernel_size={}, stride={}, dilation={}, dimension={})".format(
+            self.kernel_generator.kernel_size, self.kernel_generator.kernel_stride,
+            self.kernel_generator.kernel_dilation, self.dimension
         )
         return self.__class__.__name__ + s
 
